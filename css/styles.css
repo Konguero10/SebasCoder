@@ -1,0 +1,177 @@
+/* ======================================================
+   VARIABLES GLOBALES
+   ====================================================== */
+:root {
+    --color-primario: #0d6efd;
+    --color-secundario: #212529;
+    --color-claro: #f8f9fa;
+    --color-oscuro: #1c1c1c;
+    --color-acento: #ffc107;
+
+    --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======================================================
+   RESET BÁSICO Y ESTILOS GENERALES
+   ====================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    color: var(--color-secundario);
+    background-color: var(--color-claro);
+    line-height: 1.6;
+}
+
+/* ======================================================
+   HEADER Y NAVBAR
+   ====================================================== */
+.navbar {
+    background-color: var(--color-oscuro) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-acento);
+}
+
+/* ======================================================
+   HERO SECTION
+   ====================================================== */
+section.bg-light {
+    background: linear-gradient(135deg, #e9ecef, #ffffff);
+}
+
+section.bg-light h1 {
+    color: var(--color-oscuro);
+}
+
+section.bg-light p {
+    margin-bottom: 1.5rem;
+}
+
+/* ======================================================
+   BOTONES
+   ====================================================== */
+.btn-primary {
+    background-color: var(--color-primario);
+    border: none;
+    padding: 0.75rem 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #084298;
+}
+
+/* ======================================================
+   TARJETAS / SERVICIOS
+   ====================================================== */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* ======================================================
+   SECCIÓN DESTACADA
+   ====================================================== */
+section.bg-dark {
+    background-color: var(--color-oscuro) !important;
+}
+
+section.bg-dark h2 {
+    color: #ffffff;
+}
+
+section.bg-dark p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ======================================================
+   FOOTER
+   ====================================================== */
+footer {
+    background-color: var(--color-secundario);
+}
+
+footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-acento);
+}
+
+/* ======================================================
+   IMÁGENES
+   ====================================================== */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ======================================================
+   UTILIDADES PERSONALIZADAS
+   ====================================================== */
+.text-acento {
+    color: var(--color-acento);
+}
+
+.bg-acento {
+    background-color: var(--color-acento);
+}
+
+/* ======================================================
+   RESPONSIVE DESIGN
+   ====================================================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .text-md-end {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+}
