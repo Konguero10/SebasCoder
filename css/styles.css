@@ -66,6 +66,34 @@ section.bg-light p {
 }
 
 /* ======================================================
+   FLEXBOX - HERO SECTION
+   ====================================================== */
+.hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-img {
+    flex: 1;
+    text-align: center;
+}
+
+/* Responsive Flex */
+@media (max-width: 768px) {
+    .hero-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* ======================================================
    BOTONES
    ====================================================== */
 .btn-primary {
@@ -119,20 +147,30 @@ section.bg-dark p {
 }
 
 /* ======================================================
-   FOOTER
+   FLEXBOX - FOOTER
    ====================================================== */
-footer {
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--color-secundario);
+    color: #ffffff;
+    padding: 1rem 2rem;
 }
 
-footer a {
-    text-decoration: none;
-    transition: color 0.3s ease;
+.footer-links {
+    display: flex;
+    gap: 1rem;
 }
 
-footer a:hover {
-    color: var(--color-acento);
+/* Responsive footer */
+@media (max-width: 576px) {
+    .footer-flex {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
+
 
 /* ======================================================
    IMÁGENES
@@ -175,3 +213,26 @@ img {
         margin-top: 1rem;
     }
 }
+
+/* ======================================================
+   GRID - SECCIÓN SERVICIOS
+   ====================================================== */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
